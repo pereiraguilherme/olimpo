@@ -17,19 +17,12 @@ const App = () => {
   }
   return ( 
     <div> 
-      {/* <ExampleComponent text="Create React Library Example 😄" /> */}
-
       <Button 
-        text="My text" 
-        onClick={myOnClickFunction}
-        onMouseOver={myOnMouseOverFunction}
-        size={"large"}
-        disabled={false}
-        color={'red'}
-        textColor={'yellow'}
-        framework={"antd"}/> 
-        
-
+        variant="outlined"
+        color="primary"
+        framework={'materialui'}>
+          My button
+      </Button> 
     </div> 
   );
 }
