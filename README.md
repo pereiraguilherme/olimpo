@@ -29,7 +29,7 @@ class Example extends Component {
 To import the module from local files, you need to import `olimpo` on your project then run the following commands:
 ```
 npm start ./olimpo
-npm start ./my-test-project
+npm start ./olimpo/example
 ``` 
 ## License
 
