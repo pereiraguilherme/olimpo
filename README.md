@@ -54,7 +54,7 @@ class Example extends Component {
   }
 }
 ```
-
+**Obs.:** When use `materialui` framework component, all properties available on [Material-UI](https://material-ui.com/components/buttons/) documentation can be use.
 ## Development
 To import the module from local files, you need to import `olimpo` on your project then run the following commands:
 ```
