@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Button as MaterialButton } from '@material-ui/core';
 import './css/button.css'
 
 export default class Button extends Component {
@@ -51,7 +52,7 @@ export default class Button extends Component {
         } 
     }
 
-    render() {   
+    renderDefaultButton = () => {
         return (
             <button 
             className="button"
@@ -65,10 +66,37 @@ export default class Button extends Component {
             onClick={this.onClick()}
             onMouseOver={this.onMouseOver()}
             >
-                {!this.props.text ? 'Placeholder' : this.props.text}
-            
+                {this.props.text || 'Placeholder'}
             </button>
             
+        );        
+    }
+    
+    renderMaterialuiButton = () => {
+        return (
+            <MaterialButton 
+            onClick={this.onClick()}
+            onMouseOver={this.onMouseOver()}
+            {...this.props}>
+                {this.props.text || 'Placeholder'}
+            </MaterialButton>
+        );        
+    }
+    render() {  
+        let button;
+        switch (this.props.framework) {
+            case 'materialui':
+                button = this.renderMaterialuiButton();
+                break;
+            default:
+                button = this.renderDefaultButton();
+                break;
+        }
+
+        return (
+            <div>
+                { button }
+            </div> 
         );
     }
 }
