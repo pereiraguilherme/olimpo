@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Button as MaterialButton } from '@material-ui/core';
+import { Button as MaterialButton } from '@material-ui/core'
+import { Button as AntdButton } from 'antd'
 import './css/button.css'
 
 export default class Button extends Component {
@@ -82,12 +83,26 @@ export default class Button extends Component {
             </MaterialButton>
         );        
     }
+
+    renderAntdButton = () => {
+        return (
+            <AntdButton 
+            onClick={this.onClick()}
+            onMouseOver={this.onMouseOver()}
+            {...this.props}>
+                {this.props.text || 'Test'}
+            </AntdButton>
+        );        
+    }
+    
     render() {  
         let button;
         switch (this.props.framework) {
             case 'materialui':
                 button = this.renderMaterialuiButton();
                 break;
+            case 'antd':
+                button = this.renderAntdButton();
             default:
                 button = this.renderDefaultButton();
                 break;

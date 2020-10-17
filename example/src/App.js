@@ -20,7 +20,7 @@ const App = () => {
       <Button 
         variant="outlined"
         color="primary"
-        framework={'materialui'}>
+        framework={'antd'}>
           My button
       </Button> 
     </div> 

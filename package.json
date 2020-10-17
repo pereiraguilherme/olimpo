@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
-    "start": "microbundle-crl watch --no-compress --format modern,cjs --external=react,react-dom,react-is",
+    "start": "microbundle-crl watch --no-compress --format modern,cjs --external=react,react-dom,react-is,prop-types",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build && eslint .",
     "test:build": "run-s build",
@@ -27,7 +27,7 @@
     "react": "^16.0.0"
   },
   "devDependencies": {
-    "microbundle-crl": "^0.13.10",
+    "microbundle-crl": "^0.13.11",
     "babel-eslint": "^10.0.3",
     "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
