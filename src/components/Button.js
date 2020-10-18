@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Button as MaterialButton } from '@material-ui/core';
+import Utils from '../resources/Utils'
 import './css/button.css'
 
 export default class Button extends Component {
@@ -16,23 +17,6 @@ export default class Button extends Component {
     onMouseOver = () => {
         if (this.props.onMouseOver) {
             return this.props.onMouseOver
-        }
-    }
-
-    shouldReturnSize = (size) => {
-        if (isNaN(size)){
-            switch (size) {
-                case "small":
-                    return 150;
-                case "medium":
-                    return 200;
-                case "large":
-                    return 300
-                default:
-                    break;
-            }
-        } else {
-            return size;
         }
     }
 
@@ -57,7 +41,7 @@ export default class Button extends Component {
             <button 
             className="button"
             style={{
-                width: this.shouldReturnSize(this.props.size),
+                width: Utils.shouldReturnSize(this.props.size),
                 backgroundColor: this.props.color,
                 color: this.props.textColor,
                 ...this.shouldReturnShape(this.props.shape)

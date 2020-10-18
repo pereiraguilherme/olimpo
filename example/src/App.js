@@ -15,14 +15,21 @@ const App = () => {
   function myOnMouseOverFunction() {
     console.log("MY ON MOUSE OVER FUNCTION WORKS");
   }
+  function myOnChangeFunction() {
+    console.log("MY ON CHANGE FUNCTION WORKS");
+  }
   return ( 
     <div> 
-      <Button 
-        variant="outlined"
-        color="primary"
-        framework={'materialui'}>
-          My button
-      </Button> 
+      <Input 
+        label='This is an example'
+        placeholder='Input Example' 
+        backgroundColor='#cccc'
+        size='large'
+        shape='round'
+        disable={false}
+        error={false}
+        
+        />
     </div> 
   );
 }
