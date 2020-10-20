@@ -20,14 +20,7 @@ const App = () => {
   }
   return ( 
     <div> 
-      <Checkbox 
-        label='This is an example' 
-        backgroundColor='#cccc'
-        size='medium'
-        shape='round'
-        disable={false}
-        onClick={true}
-        />
+      <Avatar type="text" value="Jorge Fernando Silva"/>
     </div> 
   );
 }
