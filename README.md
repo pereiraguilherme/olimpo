@@ -63,7 +63,7 @@ class Example extends Component {
 |placeholder | Text that will be placed inside the input field| **string** |
 |backgroundColor     | Input field background color | Standart HTML color name: `'red', 'green', 'blue', 'yellow'...`<br> RGB code. Ex.: `rgb(255,0,0)` <br> Hexadecimal color code. Ex.: `#FF0000`|
 |size      | Component size | Default sizes: `small, medium, large`<br> Number value for size in pixels. Ex.: `100px` |
-|shape     | Component and borders shape | `round, square, circle`|
+|shape     | Component borders shape | `round, square, circle`|
 |disable   | Disable input field flag | `'true' or 'false'`|
 |error   | Error on field flag | `'true' or 'false'`|
 
@@ -109,6 +109,52 @@ class Example extends Component {
 }
 ```
 **Obs.:** When use `materialui` framework component, all properties available on [Material-UI](https://material-ui.com/components/text-fields/) documentation can be use.
+
+### Checkbox
+| Property | Description | Values |
+|----------|--------|--------|
+|label      | Text that will be placed as label | **string**|
+|backgroundColor     | Checkbox background color | Standart HTML color name: `'red', 'green', 'blue', 'yellow'...`<br> RGB code. Ex.: `rgb(255,0,0)` <br> Hexadecimal color code. Ex.: `#FF0000`|
+|size      | Component size | Default sizes: `small, medium, large`<br> Number value for size in pixels. Ex.: `100px` |
+|shape     | Checkbox borders shape | `round, square, circle`|
+|disable   | Disable checkbox field flag | `'true' or 'false'`|
+|framework | Framework that component will be used when instanciated | `'antd' or 'materialui'` |
+|onClick   | Callback method for click event| **function**|
+
+
+
+```jsx
+import React, { Component } from 'react'
+import { Checkbox } from 'olimpo'
+
+class Example extends Component {
+
+  onClick = () => {
+    console.log("On click event");
+  }
+
+  onMouseOver = () => {
+    console.log("On mouse over event");
+  }
+
+  onChange = () => {
+    console.log("On change event");
+  }
+
+  render() {
+    return 
+      <Checkbox 
+        label='This is an example' 
+        backgroundColor='#cccc'
+        size='medium'
+        shape='round'
+        disable={false}
+        onClick={this.onClick()}
+        />
+  }
+}
+```
+**Obs.:** When use `materialui` framework component, all properties available on [Material-UI](https://material-ui.com/components/checkboxes/) documentation can be use.
 
 ## Development
 To import the module from local files, you need to import `olimpo` on your project then run the following commands:

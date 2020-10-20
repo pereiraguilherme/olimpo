@@ -20,15 +20,13 @@ const App = () => {
   }
   return ( 
     <div> 
-      <Input 
-        label='This is an example'
-        placeholder='Input Example' 
+      <Checkbox 
+        label='This is an example' 
         backgroundColor='#cccc'
-        size='large'
+        size='medium'
         shape='round'
         disable={false}
-        error={false}
-        
+        onClick={true}
         />
     </div> 
   );

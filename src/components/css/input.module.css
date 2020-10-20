@@ -1,4 +1,4 @@
-input {
+.inputComponent{
     display: block;
     width: 200px;
     height: 20px;
@@ -8,9 +8,9 @@ input {
     text-align: start;
     padding: 8px;
     font-family: Verdana, sans-serif;
-  }
+}
 
-label {
+.inputComponentLabel{
     font-family: Verdana, sans-serif;
     line-height: 1.5;
     font-size: 15px;

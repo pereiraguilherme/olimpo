@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import Utils from '../resources/Utils'
 import { TextField as InputMaterialUI } from '@material-ui/core'
-import './css/input.css'
-import { red } from '@material-ui/core/colors';
+import styles from './css/input.module.css'; 
 
 export default class Input extends Component {
     constructor(props) {
@@ -48,14 +47,14 @@ export default class Input extends Component {
     renderDefaultInput = () => {
         
         return (
-            <div>
+            <div style={{display:"inline-block"}}>
                 { this.props.label ? 
-                    <label className='label' style={{color: this.props.error ? 'red' : 'black'}}>
+                    <label className={styles.inputComponentLabel} style={{color: this.props.error ? 'red' : 'black'}}>
                         {this.props.label}
                     </label> : 
                 null}
                 <input
-                className='input'
+                className={styles.inputComponent}
                 type='text'
                 placeholder={this.props.placeholder}
                 style={{

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Button as MaterialButton } from '@material-ui/core';
 import Utils from '../resources/Utils'
-import './css/button.css'
+import styles from './css/button.module.css'
 
 export default class Button extends Component {
     constructor(props) {
@@ -39,7 +39,7 @@ export default class Button extends Component {
     renderDefaultButton = () => {
         return (
             <button 
-            className="button"
+            className={style.buttonComponent}
             style={{
                 width: Utils.shouldReturnSize(this.props.size),
                 backgroundColor: this.props.color,
