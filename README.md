@@ -197,7 +197,7 @@ class Example extends Component {
   }
 }
 ```
-**Obs.:** When use `materialui` framework component, all properties available on [Material-UI](https://material-ui.com/components/avatars/) documentation can be use.
+**Obs.:** When use `materialui` or `antd` framework component, all properties available on [Material-UI](https://material-ui.com/components/avatars/) and [Ant Design](https://ant.design/components/avatar/) documentation can be use.
 
 ## Development
 To import the module from local files, you need to import `olimpo` on your project then run the following commands:
