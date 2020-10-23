@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
-    "start": "microbundle-crl watch --no-compress --format modern,cjs --external=react,react-dom,react-is",
+    "start": "microbundle-crl watch --no-compress --format modern,cjs --external=react,react-dom,react-is,prop-types",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build && eslint .",
     "test:build": "run-s build",
