@@ -20,7 +20,7 @@ const App = () => {
   }
   return ( 
     <div> 
-      <Input framework="antd" size="small" maxLength={10} />
+      <Checkbox />
     </div> 
   );
 }

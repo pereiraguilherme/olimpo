@@ -19,6 +19,26 @@ export default class Utils {
                     console.log(size)
                     return size;
                 }
+            case "checkbox":
+                if (isNaN(size)){
+                    switch (size) {
+                        case "small":
+                            return {
+                                width: 20,
+                                height: 20
+                            }
+                        case "large":
+                            return {
+                                width: 30,
+                                height: 30
+                            }
+                        default:
+                            return {
+                                width: 25,
+                                height: 25
+                            }
+                    }
+                }
             default:
                 return this.defaultSizeLogic(size);
         }

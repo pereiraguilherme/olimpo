@@ -153,7 +153,7 @@ class Example extends Component {
   }
 }
 ```
-**Obs.:** When use `materialui` framework component, all properties available on [Material-UI](https://material-ui.com/components/checkboxes/) documentation can be use.
+**Obs.:** When use `materialui` or `antd` framework component, all properties available on [Material-UI](https://material-ui.com/components/checkboxes/) and [Ant Design](https://ant.design/components/checkbox/) documentation can be use.
 
 ### Avatar
 | Property | Description | Values |
