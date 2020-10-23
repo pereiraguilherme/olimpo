@@ -25,7 +25,7 @@ export default class Utils {
         
     }
 
-    defaultSizeLogic = (size) => {
+    static defaultSizeLogic = (size) => {
         if (isNaN(size)){
             switch (size) {
                 case "small":
