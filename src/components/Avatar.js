@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styles from './css/avatar.module.css'
 import { Avatar as MaterialuiAvatar } from '@material-ui/core'
+import { Avatar as AntdAvatar } from 'antd'
 import Utils from '../resources/Utils'
 import defaultAvatar from '/../resources/images/default-avatar.jpg'
 
@@ -85,11 +86,26 @@ export default class Avatar extends Component {
         }        
     }
 
+    renderAntdAvatar = () => {
+        if(this.props.type === "text") {
+            return (
+                <AntdAvatar {...this.props}>{this.props.value}</AntdAvatar>
+            );    
+        } else {
+            return (
+                <AntdAvatar {...this.props}/>
+            );
+        }        
+    }
+
     render() {  
         let avatar;
         switch (this.props.framework) {
             case 'materialui':
                 avatar = this.renderMaterialuiAvatar();
+                break;
+            case 'antd':
+                avatar = this.renderAntdAvatar();
                 break;
             default:
                 avatar = this.renderDefaultAvatar();
