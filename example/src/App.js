@@ -20,7 +20,7 @@ const App = () => {
   }
   return ( 
     <div> 
-      <Button framework="antd" type="primary"/>
+      <Input framework="antd" size="small" maxLength={10} />
     </div> 
   );
 }

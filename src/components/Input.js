@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Utils from '../resources/Utils'
 import { TextField as InputMaterialUI } from '@material-ui/core'
+import { Input as InputAntd } from 'antd';
 import styles from './css/input.module.css'; 
 
 export default class Input extends Component {
@@ -44,6 +45,12 @@ export default class Input extends Component {
         );
     }
 
+    renderAntdInput = () => {
+        return (
+            <InputAntd {...this.props}/>
+        );
+    }
+
     renderDefaultInput = () => {
         
         return (
@@ -78,6 +85,9 @@ export default class Input extends Component {
         switch (this.props.framework) {
             case 'materialui':
                 input = this.renderMaterialuiInput();
+                break;
+            case 'antd':
+                input = this.renderAntdInput();
                 break;
             default:
                 input = this.renderDefaultInput();

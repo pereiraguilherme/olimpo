@@ -54,7 +54,7 @@ class Example extends Component {
   }
 }
 ```
-**Obs.:** When use `materialui` framework component, all properties available on [Material-UI](https://material-ui.com/components/buttons/) documentation can be use.
+**Obs.:** When use `materialui` or `antd` framework component, all properties available on [Material-UI](https://material-ui.com/components/buttons/) and [Ant Design](https://ant.design/components/button/) documentation can be use.
 
 ### Input
 | Property | Description | Values |
@@ -66,7 +66,6 @@ class Example extends Component {
 |shape     | Component borders shape | `round, square, circle`|
 |disable   | Disable input field flag | `'true' or 'false'`|
 |error   | Error on field flag | `'true' or 'false'`|
-
 |framework | Framework that component will be used when instanciated | `'antd' or 'materialui'` |
 |onClick   | Callback method for click event| **function**|
 |onMouseOver | Callback method for mouse over the component event | **function**|
@@ -108,7 +107,7 @@ class Example extends Component {
   }
 }
 ```
-**Obs.:** When use `materialui` framework component, all properties available on [Material-UI](https://material-ui.com/components/text-fields/) documentation can be use.
+**Obs.:** When use `materialui` or `antd` framework component, all properties available on [Material-UI](https://material-ui.com/components/text-fields/) and [Ant Design](https://ant.design/components/input/) documentation can be use.
 
 ### Checkbox
 | Property | Description | Values |
