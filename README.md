@@ -69,7 +69,7 @@ class Example extends Component {
 |framework | Framework that component will be used when instanciated | `'antd' or 'materialui'` |
 |onClick   | Callback method for click event| **function**|
 |onMouseOver | Callback method for mouse over the component event | **function**|
-|onChange | Callback method for mouse over the component event | **function**|
+|onChange | Callback method for change component event | **function**|
 
 
 
@@ -119,6 +119,8 @@ class Example extends Component {
 |disable   | Disable checkbox field flag | `'true' or 'false'`|
 |framework | Framework that component will be used when instanciated | `'antd' or 'materialui'` |
 |onClick   | Callback method for click event| **function**|
+|onChange | Callback method for change component event | **function**|
+
 
 
 
@@ -153,7 +155,7 @@ class Example extends Component {
   }
 }
 ```
-**Obs.:** When use `materialui` framework component, all properties available on [Material-UI](https://material-ui.com/components/checkboxes/) documentation can be use.
+**Obs.:** When use `materialui` or `antd` framework component, all properties available on [Material-UI](https://material-ui.com/components/checkboxes/) and [Ant Design](https://ant.design/components/checkbox/) documentation can be use.
 
 ### Avatar
 | Property | Description | Values |
@@ -167,7 +169,7 @@ class Example extends Component {
 |size      | Avatar size | Default sizes: `small, medium, large`<br> **Number** value for size in pixels. Ex.: `100` |
 |shape     | Checkbox borders shape | `round, square, circle`|
 |framework | Framework that component will be used when instanciated | `'antd' or 'materialui'` |
-|onMouseOver   | Callback method for click event| **function**|
+|onMouseOver | Callback method for mouse over the component event | **function**|
 
 
 
