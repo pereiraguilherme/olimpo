@@ -22,6 +22,12 @@ export default class Checkbox extends Component {
         }
     }
 
+    onChange = () => {
+        if (this.props.onChange) {
+            return this.props.onChange
+        }
+    }
+
     shouldReturnShape = (shape) => {
         switch (shape) {
             case "circle":
@@ -57,7 +63,8 @@ export default class Checkbox extends Component {
                         type={this.props.type || 'checkbox'}
                         style={{
                             ...Utils.shouldReturnSize(this.props.size, "checkbox")}}
-                        onClick={this.onClick}/>
+                        onClick={this.onClick()}
+                        onChange={this.onChange()}/>
                     <span 
                         className={styles.checkmark}
                         style={{
