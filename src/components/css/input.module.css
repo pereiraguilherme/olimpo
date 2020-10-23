@@ -1,0 +1,19 @@
+.inputComponent{
+    display: block;
+    width: 200px;
+    height: 20px;
+    border-radius: 3px;
+    text-rendering: auto;
+    word-spacing: normal;
+    text-align: start;
+    padding: 8px;
+    font-family: Verdana, sans-serif;
+}
+
+.inputComponentLabel{
+    font-family: Verdana, sans-serif;
+    line-height: 1.5;
+    font-size: 15px;
+    margin-bottom: 3px;
+    display: block;
+}

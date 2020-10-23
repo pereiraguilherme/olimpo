@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Button as MaterialButton } from '@material-ui/core'
-import { Button as AntdButton } from 'antd'
-import './css/button.css'
+import { Button as MaterialButton } from '@material-ui/core';
+import { Button as AntdButton } from 'antd';
+import Utils from '../resources/Utils'
+import styles from './css/button.module.css'
 
 export default class Button extends Component {
     constructor(props) {
@@ -90,11 +91,10 @@ export default class Button extends Component {
             onClick={this.onClick()}
             onMouseOver={this.onMouseOver()}
             {...this.props}>
-                {this.props.text || 'Test'}
+                {this.props.text || 'Placeholder'}
             </AntdButton>
         );        
     }
-    
     render() {  
         let button;
         switch (this.props.framework) {
@@ -103,6 +103,7 @@ export default class Button extends Component {
                 break;
             case 'antd':
                 button = this.renderAntdButton();
+                break;
             default:
                 button = this.renderDefaultButton();
                 break;

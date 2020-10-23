@@ -17,12 +17,7 @@ const App = () => {
   }
   return ( 
     <div> 
-      <Button 
-        variant="outlined"
-        color="primary"
-        framework={'antd'}>
-          My button
-      </Button> 
+      <Button framework="antd" type="primary"/>
     </div> 
   );
 }
