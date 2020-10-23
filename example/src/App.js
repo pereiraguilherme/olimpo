@@ -20,7 +20,13 @@ const App = () => {
   }
   return ( 
     <div> 
-      <Avatar type="text" value="Jorge Fernando Silva"/>
+      <Avatar 
+        type="text"
+        value="Olimpo"
+        fontColor="white"
+        backgroundColor="#0891a1"
+        shape="circle" 
+        size={300} />
     </div> 
   );
 }

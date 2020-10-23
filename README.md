@@ -156,6 +156,48 @@ class Example extends Component {
 ```
 **Obs.:** When use `materialui` framework component, all properties available on [Material-UI](https://material-ui.com/components/checkboxes/) documentation can be use.
 
+### Avatar
+| Property | Description | Values |
+|----------|--------|--------|
+|type      | Avatar type that will be used | It can be `'image'` or `'text'`|
+|src       | Link for the image that will be displayed when `type` is `'image'`| **string**|
+|alt       | Value for when image can't be loaded  | **string**|
+|value      | Text that will displayed when `type` is `'text'` | **string**|
+|fontColor      | Color for the text font when `type` is `'text'`  |  Standart HTML color name: `'red', 'green', 'blue', 'yellow'...`<br> RGB code. Ex.: `rgb(255,0,0)` <br> Hexadecimal color code. Ex.: `#FF0000`|
+|backgroundColor     | Avatar background color when `type` is `'text'` | Standart HTML color name: `'red', 'green', 'blue', 'yellow'...`<br> RGB code. Ex.: `rgb(255,0,0)` <br> Hexadecimal color code. Ex.: `#FF0000`|
+|size      | Avatar size | Default sizes: `small, medium, large`<br> **Number** value for size in pixels. Ex.: `100` |
+|shape     | Checkbox borders shape | `round, square, circle`|
+|framework | Framework that component will be used when instanciated | `'antd' or 'materialui'` |
+|onMouseOver   | Callback method for click event| **function**|
+
+
+
+```jsx
+import React, { Component } from 'react'
+import { Avatar } from 'olimpo'
+
+class Example extends Component {
+
+  onMouseOver = () => {
+    console.log("On mouse over event");
+  }
+
+  render() {
+    return 
+      <Avatar 
+        type="text"
+        value="Olimpo"
+        fontColor="white"
+        backgroundColor="#0891a1"
+        shape="circle" 
+        size="large"
+        onMouseOver={this.onMouseOver()} 
+      />
+  }
+}
+```
+**Obs.:** When use `materialui` framework component, all properties available on [Material-UI](https://material-ui.com/components/avatars/) documentation can be use.
+
 ## Development
 To import the module from local files, you need to import `olimpo` on your project then run the following commands:
 ```

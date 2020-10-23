@@ -3,7 +3,7 @@
     vertical-align: middle;
     width: 100px;
     height: 100px;
-    background-color: rgb(165, 1, 1);
+    background-color: #9b9999;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -11,7 +11,7 @@
 
 }
 .roundedAvatar {
-border-radius: 6px;
+border-radius: 10px;
 }
 .circleAvatar {
     border-radius: 50%;
@@ -20,7 +20,6 @@ border-radius: 6px;
 .initials {
     display: inline-block;  
     position: relative;
-    font-size: 50px; /* 50% of parent */
     line-height: 30px; /* 50% of parent */
     color: #fff;
     font-family: Verdana, sans-serif;

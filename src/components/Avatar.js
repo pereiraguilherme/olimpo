@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
 import styles from './css/avatar.module.css'
 import { Avatar as MaterialuiAvatar } from '@material-ui/core'
-const defaultAvatar = require('/home/ia/olimpo/src/resources/images/default-avatar.jpg')
+import Utils from '../resources/Utils'
+import defaultAvatar from '/../resources/images/default-avatar.jpg'
 
 export default class Avatar extends Component {
     constructor(props) {
         super(props);
     }
 
-    onClick = () => {
-        if (this.props.onClick) {
-            return this.props.onClick
+    onMouseOver = () => {
+        if (this.props.onMouseOver) {
+            return this.props.onMouseOver
         }
     }
 
@@ -26,45 +27,65 @@ export default class Avatar extends Component {
     }
 
     getInitials = (str) => {
-        let splitedString = str.split(' ');
-        if(splitedString.length > 2) {
-            splitedString = splitedString.slice(0,2);
+        if(!str) {
+            return 'OP';
+        } else {
+            let splitedString = str.split(' ');
+            if(splitedString.length > 2) {
+                splitedString = splitedString.slice(0,2);
+            }
+            return splitedString.map(string => string.charAt(0)).join().replaceAll(',', '');
         }
-        return splitedString.map(string => string.charAt(0)).join().replaceAll(',', '');
     }
 
-    textAvatar = () => {
+    textAvatar = (size) => {
         return ( 
-            <div className={this.shouldReturnShapeClass(this.props.shape)}>
-                <span className={styles.initials}>
+            <div 
+            className={this.shouldReturnShapeClass(this.props.shape)} 
+            style={{ width: size , height: size, backgroundColor: this.props.backgroundColor }}>
+                <span className={styles.initials} style={{fontSize: size*0.4, color: this.props.fontColor}}>
                     {this.getInitials(this.props.value)}
                 </span>
             </div>
         ); 
     }
 
-    imageAvatar = () => {
+
+    imageAvatar = (size) => {
         return ( 
             <div>
-                <img className={this.shouldReturnShapeClass(this.props.shape)} src={defaultAvatar} alt="Avatar" />
+                <img 
+                className={this.shouldReturnShapeClass(this.props.shape)}
+                src={ this.props.src || defaultAvatar}
+                style={{ width: size , height: size, backgroundColor: this.props.backgroundColor }}
+                alt={"Avatar" || this.props.alt} />
             </div>
         ); 
     }
 
     renderDefaultAvatar = () => {
+        const size = Utils.shouldReturnSize(this.props.size, "avatar") || 100;
+        console.log(size);
         return (
-            <div>
-                {this.props.type === 'text' ? this.textAvatar() : this.imageAvatar()}
+            <div onMouseOver={this.onMouseOver()}>
+                {this.props.type === 'text' ? this.textAvatar(size) : this.imageAvatar(size)}
             </div>
             
         );        
     }
     
     renderMaterialuiAvatar = () => {
-        return (
-            <MaterialuiAvatar/>
-        );        
+        if(this.props.type === "text") {
+            return (
+                <MaterialuiAvatar {...this.props}>{this.props.value}</MaterialuiAvatar>
+            );    
+        } else {
+            return (
+                <MaterialuiAvatar {...this.props}/>
+            );
+        }        
     }
+
     render() {  
         let avatar;
         switch (this.props.framework) {
