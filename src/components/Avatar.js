@@ -65,7 +65,6 @@ export default class Avatar extends Component {
 
     renderDefaultAvatar = () => {
         const size = Utils.shouldReturnSize(this.props.size, "avatar") || 100;
-        console.log(size);
         return (
             <div onMouseOver={this.onMouseOver()}>
                 {this.props.type === 'text' ? this.textAvatar(size) : this.imageAvatar(size)}
