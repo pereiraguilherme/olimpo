@@ -1,0 +1,28 @@
+
+.squareAvatar, .circleAvatar, .roundedAvatar {
+    vertical-align: middle;
+    width: 100px;
+    height: 100px;
+    background-color: #9b9999;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.roundedAvatar {
+border-radius: 10px;
+}
+.circleAvatar {
+    border-radius: 50%;
+  }
+
+.initials {
+    display: inline-block;  
+    position: relative;
+    line-height: 30px; /* 50% of parent */
+    color: #fff;
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+    
+  }

@@ -27,7 +27,7 @@ export default class Button extends Component {
             case "circle":
                 const radius = !this.props.circleRadius ? 75 : this.props.circleRadius;
                 return {
-                    borderRadius: (radius / 2),
+                    borderRadius: '50%',
                     width: radius,
                     height: radius,
                 }
@@ -39,7 +39,7 @@ export default class Button extends Component {
     renderDefaultButton = () => {
         return (
             <button 
-            className={style.buttonComponent}
+            className={styles.buttonComponent}
             style={{
                 width: Utils.shouldReturnSize(this.props.size),
                 backgroundColor: this.props.color,
