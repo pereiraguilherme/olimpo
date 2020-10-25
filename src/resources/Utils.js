@@ -3,8 +3,9 @@ export default class Utils {
     
     static shouldReturnSize = (size, component = "") => {
         switch (component) {
+            case "button":
             case "avatar":
-                if (isNaN(size)){
+                if (isNaN(size) || !size){
                     switch (size) {
                         case "small":
                             return 50;
@@ -16,7 +17,6 @@ export default class Utils {
                             return 100;
                     }
                 } else {
-                    console.log(size)
                     return size;
                 }
             case "checkbox":
@@ -55,7 +55,7 @@ export default class Utils {
                 case "large":
                     return 300
                 default:
-                    break;
+                    return 200;
             }
         } else {
             return size;

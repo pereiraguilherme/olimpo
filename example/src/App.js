@@ -20,7 +20,7 @@ const App = () => {
   }
   return ( 
     <div> 
-      <Checkbox />
+      <Button text="Test" shape="circle"/>
     </div> 
   );
 }
