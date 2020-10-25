@@ -42,14 +42,15 @@ class Example extends Component {
 
   render() {
     return <Button
-        text="My text" 
+        text='My text' 
+        size='large'
+        color='red'
+        textColor='yellow'
+        shape='round'
+        disabled={false}
         onClick={this.onClick()}
         onMouseOver={this.onMouseOver()}
-        size={"large"}
-        disabled={false}
-        color={"red"}
-        textColor={"yellow"}
-        shape={"round"}
+        
      />
   }
 }
@@ -186,12 +187,12 @@ class Example extends Component {
   render() {
     return 
       <Avatar 
-        type="text"
-        value="Olimpo"
-        fontColor="white"
-        backgroundColor="#0891a1"
-        shape="circle" 
-        size="large"
+        type='text'
+        value='Olimpo'
+        fontColor='white'
+        backgroundColor='#0891a1'
+        shape='circle' 
+        size='large'
         onMouseOver={this.onMouseOver()} 
       />
   }
