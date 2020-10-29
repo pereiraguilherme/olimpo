@@ -18,9 +18,12 @@ const App = () => {
   function myOnChangeFunction() {
     console.log("MY ON CHANGE FUNCTION WORKS");
   }
+  
   return ( 
     <div> 
-      <Button text="Test" shape="circle"/>
+      <Button text="Test" shape="round"/>
+      <Checkbox label="Test" shape="round"/>
+      <Input/>
     </div> 
   );
 }

@@ -12,12 +12,12 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "microbundle-crl --no-compress --format modern,cjs",
+    "build": "microbundle-crl --no-compress --format modern,cjs --external=react,react-dom,react-is,prop-types",
     "start": "microbundle-crl watch --no-compress --format modern,cjs --external=react,react-dom,react-is,prop-types",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build && eslint .",
     "test:build": "run-s build",
-    "test:lint": "eslint .",
+    "test:lint": "eslint . --fix",
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && npm install && npm run build",
