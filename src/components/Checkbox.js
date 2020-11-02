@@ -33,7 +33,8 @@ export default class Checkbox extends Component {
             disabled={this.props.disabled}
             type='checkbox'
             style={{
-              ...Utils.shouldReturnSize(this.props.size, 'checkbox')
+              ...Utils.shouldReturnSize(this.props.size, 'checkbox'),
+              ...this.props.checkboxStyle
             }}
             onClick={this.onClick()}
             onChange={this.onChange()}
@@ -43,7 +44,8 @@ export default class Checkbox extends Component {
             style={{
               ...Utils.shouldReturnShape(this.props.shape),
               ...Utils.shouldReturnSize(this.props.size, 'checkbox'),
-              backgroundColor: this.props.backgroundColor
+              backgroundColor: this.props.backgroundColor,
+              ...this.props.labelStyle
             }}
           />
           {this.props.label || 'Placeholder'}
