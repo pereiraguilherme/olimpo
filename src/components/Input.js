@@ -60,7 +60,7 @@ export default class Input extends Component {
             border: !this.props.error ? '1px solid #cccccc' : '1px solid red',
             ...Utils.shouldReturnShape(this.props.shape)
           }}
-          disabled={this.props.disable}
+          disabled={this.props.disabled}
           onClick={this.onClick()}
           onMouseOver={this.onMouseOver()}
           onChange={this.onChange()}

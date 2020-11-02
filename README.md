@@ -65,7 +65,7 @@ class Example extends Component {
 |backgroundColor     | Input field background color | Standart HTML color name: `'red', 'green', 'blue', 'yellow'...`<br> RGB code. Ex.: `rgb(255,0,0)` <br> Hexadecimal color code. Ex.: `#FF0000`|
 |size      | Component size | Default sizes: `small, medium, large`<br> Number value for size in pixels. Ex.: `100px` |
 |shape     | Component borders shape | `round, square, circle`|
-|disable   | Disable input field flag | `'true' or 'false'`|
+|disabled   | Disable input field flag | `'true' or 'false'`|
 |error   | Error on field flag | `'true' or 'false'`|
 |framework | Framework that component will be used when instanciated | `'antd' or 'materialui'` |
 |onClick   | Callback method for click event| **function**|
@@ -99,7 +99,7 @@ class Example extends Component {
         backgroundColor='#cccc'
         size='large'
         shape='round'
-        disable={false}
+        disabled={false}
         error={false}
         onClick={this.onClick()}
         onMouseOver={this.onMouseOver()}

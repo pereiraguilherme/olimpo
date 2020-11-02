@@ -61,7 +61,7 @@ describe('Button', () => {
 
   it('should be disabled when property is true', () => {
     act(() => {
-      render(<Button disabled />, container)
+      render(<Button disabled={true} />, container)
     })
     const button = container.querySelector('button')
     expect(button.disabled).toBe(true)
