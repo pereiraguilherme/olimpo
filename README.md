@@ -4,6 +4,7 @@
 
 [![NPM](https://img.shields.io/npm/v/olimpo.svg)](https://www.npmjs.com/package/olimpo) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+![alt text](https://github.com/pereiraguilherme/olimpo/blob/addContributingGuide/olimpo.jpg)
 ## Install
 
 ```bash
@@ -196,12 +197,46 @@ class Example extends Component {
 ```
 **Obs.:** When use `materialui` or `antd` framework component, all properties available on [Material-UI](https://material-ui.com/components/avatars/) and [Ant Design](https://ant.design/components/avatar/) documentation can be use.
 
-## Development
-To import the module from local files, you need to import `olimpo` on your project then run the following commands:
+## Contributing Guide
+Olimpo welcome all contributions. Please read contributing guide first. You can submit any ideas as pull requests or as GitHub issues. If you'd like to improve code, follow the develop patterns that already exist in other components and have a good time! :smile:
+For every new component, it must exist on others frameworks! Olimpo is the house of all gods, can you imagine if only Zeus live there? :stuck_out_tongue_winking_eye: 
+### Development
+To start develpment in `olimpo` there is a few things that you need to do in order to get it running on your machine. First setup you environment:
+```
+cd olimpo/
+npm install
+```
+Then you are able to start it. For development, you can start a rollup and also a example if you want to check visualy your change or new component. Jut import the module from local files, you need to import `olimpo` on your project then run the following commands:
 ```
 npm start ./olimpo
 npm start ./olimpo/example
 ``` 
+All new component **MUST** be exported at `index.js` file.
+
+### Tests and Lint
+As part of the good pratices pack, tests **MUST** be written for every change. Change or new components that don't have tests won't be accepted. So please, make sure tests are passing and testing every thing the right way before a pull request is open.
+
+Also, make sure that lint are running and no errors are ocurring, this helps to implement a pattern for `olimpo` and it should be followed by everyone. :smile:
+
+### Documentation
+For better usability and understanding, documentation is very necessary, so for every contribution that changes a component interface/property or add a new component to `olimpo`, it **MUST** have the right documentation. Add documentation location of the other frameworks as well! Check the example below:
+
+| Property | Description | Values |
+|----------|-------------|--------|
+|property  | Property description | Possible values|
+
+```jsx
+import React, { Component } from 'react'
+import MyComponent from 'olimpo'
+ 
+class Example extends Component {
+  render() {
+    return <MyComponent property='myPropery'/>
+  }
+}
+```
+### Pull requests
+If you are contributign with `olimpo`, make sure that everything is tested and ready for be in master before you open the pull request. In pull request description, please, specify what is the change or new component that are being merged. Give every possible detail about it, this way the development team that mantains the framework can merge this as soon as possible!
 
 ## License
 
