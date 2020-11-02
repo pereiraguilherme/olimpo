@@ -58,7 +58,8 @@ export default class Input extends Component {
             backgroundColor: this.props.backgroundColor,
             width: Utils.shouldReturnSize(this.props.size),
             border: !this.props.error ? '1px solid #cccccc' : '1px solid red',
-            ...Utils.shouldReturnShape(this.props.shape)
+            ...Utils.shouldReturnShape(this.props.shape),
+            ...this.props.style
           }}
           disabled={this.props.disabled}
           onClick={this.onClick()}
