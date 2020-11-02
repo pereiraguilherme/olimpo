@@ -66,4 +66,19 @@ describe('Button', () => {
     const button = container.querySelector('button')
     expect(button.disabled).toBe(true)
   })
+  it('render the default button from MaterialUI', () => {
+    act(() => {
+      render(<Button framework='materialui'/>, container)
+    })
+    const button = container.querySelector('button')
+    expect(button.className).toBe('MuiButtonBase-root MuiButton-root MuiButton-text')
+  })
+
+  it('render the default button from Antd', () => {
+    act(() => {
+      render(<Button framework='antd'/>, container)
+    })
+    const button = container.querySelector('button')
+    expect(button.className).toBe('ant-btn')
+  })
 })
