@@ -197,8 +197,8 @@ class Example extends Component {
 **Obs.:** When use `materialui` or `antd` framework component, all properties available on [Material-UI](https://material-ui.com/components/avatars/) and [Ant Design](https://ant.design/components/avatar/) documentation can be use.
 
 ## Contributing Guide
-Olimpo welcome all contributions. Please read contributing guide first. You can submit any ideas as pull requests or as GitHub issues. If you'd like to improve code, follow the develop patterns that already exist in other components and have a good time! :)
-For every new component, it must exist on others frameworks! Olimpo is the house of all gods, can you imagine if only Zeus live there? :p 
+Olimpo welcome all contributions. Please read contributing guide first. You can submit any ideas as pull requests or as GitHub issues. If you'd like to improve code, follow the develop patterns that already exist in other components and have a good time! :smile:
+For every new component, it must exist on others frameworks! Olimpo is the house of all gods, can you imagine if only Zeus live there? :stuck_out_tongue_winking_eye: 
 ### Development
 To start develpment in `olimpo` there is a few things that you need to do in order to get it running on your machine. First setup you environment:
 ```
@@ -215,7 +215,7 @@ All new component **MUST** be exported at `index.js` file.
 ### Tests and Lint
 As part of the good pratices pack, tests **MUST** be written for every change. Change or new components that don't have tests won't be accepted. So please, make sure tests are passing and testing every thing the right way before a pull request is open.
 
-Also, make sure that lint are running and no errors are ocurring, this helps to implement a pattern for `olimpo` and it should be followed by everyone. :D
+Also, make sure that lint are running and no errors are ocurring, this helps to implement a pattern for `olimpo` and it should be followed by everyone. :smile:
 
 ### Documentation
 For better usability and understanding, documentation is very necessary, so for every contribution that changes a component interface/property or add a new component to `olimpo`, it **MUST** have the right documentation. Add documentation location of the other frameworks as well! Check the example below:
