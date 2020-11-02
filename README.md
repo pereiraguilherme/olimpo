@@ -122,6 +122,8 @@ class Example extends Component {
 |framework | Framework that component will be used when instanciated | `'antd' or 'materialui'` |
 |onClick   | Callback method for click event| **function**|
 |onChange | Callback method for change component event | **function**|
+|labelStyle | Object to style exclusively the label | **object** |
+|checkboxStyle | Object to style exclusively the checkbox | **object** |
 
 
 
