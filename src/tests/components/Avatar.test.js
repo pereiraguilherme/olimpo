@@ -41,6 +41,7 @@ describe('Avatar', () => {
 
     act(() => {
       avatar.dispatchEvent(
+        /* global MouseEvent */
         new MouseEvent('mouseover', {
           view: window,
           bubbles: true,

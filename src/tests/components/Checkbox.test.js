@@ -13,7 +13,7 @@ describe('Checkbox', () => {
 
   it('render the default input with label', () => {
     act(() => {
-      render(<Checkbox/>, container)
+      render(<Checkbox />, container)
     })
     const label = container.querySelector('label')
     const checkbox = container.querySelector('input')
@@ -24,7 +24,7 @@ describe('Checkbox', () => {
 
   it('should be disabled when property is true', () => {
     act(() => {
-      render(<Checkbox disabled={true} />, container)
+      render(<Checkbox disabled />, container)
     })
     const checkbox = container.querySelector('input')
     expect(checkbox.disabled).toBe(true)
@@ -38,14 +38,15 @@ describe('Checkbox', () => {
     const checkbox = container.querySelector('input')
 
     act(() => {
-        checkbox.dispatchEvent(new MouseEvent('click', { bubbles: true }))
+      /* global MouseEvent */
+      checkbox.dispatchEvent(new MouseEvent('click', { bubbles: true }))
     })
     expect(onClick).toHaveBeenCalledTimes(1)
   })
 
   it('render the default checkbox from MaterialUI', () => {
     act(() => {
-      render(<Checkbox framework='materialui'/>, container)
+      render(<Checkbox framework='materialui' />, container)
     })
     const checkbox = container.querySelector('input')
     expect(checkbox.className).toBe('PrivateSwitchBase-input-4')
@@ -54,11 +55,10 @@ describe('Checkbox', () => {
 
   it('render the default checkbox from Antd', () => {
     act(() => {
-      render(<Checkbox framework='antd'/>, container)
+      render(<Checkbox framework='antd' />, container)
     })
     const checkbox = container.querySelector('input')
     expect(checkbox.className).toBe('ant-checkbox-input')
     expect(checkbox.type).toBe('checkbox')
   })
-
 })
