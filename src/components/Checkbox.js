@@ -7,17 +7,10 @@ import Utils from '../resources/Utils'
 export default class Checkbox extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      checked: false
-    }
   }
 
   onClick = () => {
     if (this.props.onClick) {
-      if (this.props.framework !== 'materialui') {
-        console.log('Click')
-        this.setState({ checked: !this.state.checked })
-      }
       return this.props.onClick
     }
   }
@@ -37,14 +30,12 @@ export default class Checkbox extends Component {
   }
 
   renderDefaultCheckbox = () => {
-    console.log(this.props)
     return (
       <div>
         <label className={styles.checkboxComponentLabel}>
           <input
-            disabled={this.props.disable}
-            defaultChecked={this.state.checked || false}
-            type={this.props.type || 'checkbox'}
+            disabled={this.props.disabled}
+            type='checkbox'
             style={{
               ...Utils.shouldReturnSize(this.props.size, 'checkbox')
             }}

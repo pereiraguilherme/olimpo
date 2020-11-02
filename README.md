@@ -20,7 +20,7 @@ npm install --save olimpo
 |textColor | Change the color of the text displayed | Standart HTML color name: `'red', 'green', 'blue', 'yellow'...`<br> RGB code. Ex.: `rgb(255,0,0)` <br> Hexadecimal color code. Ex.: `#ff0000`|
 |size      | Component size | Default sizes: `small, medium, large`<br> Number value for size in pixels. Ex.: `100px` |
 |shape     | Component and borders shape | `round, square, circle`|
-|disable   | Disable button flag | `'true' or 'false'`|
+|disabled   | Disable button flag | `'true' or 'false'`|
 |framework | Framework that component will be used when instanciated | `'antd' or 'materialui'` |
 |onClick   | Callback method for click event| **function**|
 |onMouseOver | Callback method for mouse over the component event | **function**|
@@ -117,7 +117,7 @@ class Example extends Component {
 |backgroundColor     | Checkbox background color | Standart HTML color name: `'red', 'green', 'blue', 'yellow'...`<br> RGB code. Ex.: `rgb(255,0,0)` <br> Hexadecimal color code. Ex.: `#FF0000`|
 |size      | Component size | Default sizes: `small, medium, large`<br> Number value for size in pixels. Ex.: `100px` |
 |shape     | Checkbox borders shape | `round, square, circle`|
-|disable   | Disable checkbox field flag | `'true' or 'false'`|
+|disabled   | Disable checkbox field flag | `'true' or 'false'`|
 |framework | Framework that component will be used when instanciated | `'antd' or 'materialui'` |
 |onClick   | Callback method for click event| **function**|
 |onChange | Callback method for change component event | **function**|
@@ -135,10 +135,6 @@ class Example extends Component {
     console.log("On click event");
   }
 
-  onMouseOver = () => {
-    console.log("On mouse over event");
-  }
-
   onChange = () => {
     console.log("On change event");
   }
@@ -150,7 +146,7 @@ class Example extends Component {
         backgroundColor='#cccc'
         size='medium'
         shape='round'
-        disable={false}
+        disabled={false}
         onClick={this.onClick()}
         />
   }

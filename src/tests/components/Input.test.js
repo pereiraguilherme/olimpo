@@ -64,4 +64,20 @@ describe('Input', () => {
     })
     expect(onMouseOver).toHaveBeenCalledTimes(1)
   })
+  
+  it('render the default input from MaterialUI', () => {
+    act(() => {
+      render(<Input framework='materialui'/>, container)
+    })
+    const input = container.querySelector('input')
+    expect(input.className).toBe('MuiInputBase-input MuiInput-input')
+  })
+
+  it('render the default input from Antd', () => {
+    act(() => {
+      render(<Input framework='antd'/>, container)
+    })
+    const input = container.querySelector('input')
+    expect(input.className).toBe('ant-input')
+  })
 })
