@@ -13,21 +13,21 @@ describe('Input', () => {
 
   it('render the default input with label', () => {
     act(() => {
-      render(<Input label='Test'/>, container)
+      render(<Input label='Test' />, container)
     })
     const label = container.querySelector('label')
     expect(label.textContent).toBe('Test')
   })
   it('render the default input with placeholder', () => {
     act(() => {
-      render(<Input placeholder='Test'/>, container)
+      render(<Input placeholder='Test' />, container)
     })
     const input = container.querySelector('input')
     expect(input.placeholder).toBe('Test')
   })
   it('should be disabled when property is true', () => {
     act(() => {
-      render(<Input disabled={true} />, container)
+      render(<Input disabled />, container)
     })
     const input = container.querySelector('input')
     expect(input.disabled).toBe(true)
@@ -41,6 +41,7 @@ describe('Input', () => {
     const input = container.querySelector('input')
 
     act(() => {
+      /* global MouseEvent */
       input.dispatchEvent(new MouseEvent('click', { bubbles: true }))
     })
     expect(onClick).toHaveBeenCalledTimes(1)
@@ -64,10 +65,10 @@ describe('Input', () => {
     })
     expect(onMouseOver).toHaveBeenCalledTimes(1)
   })
-  
+
   it('render the default input from MaterialUI', () => {
     act(() => {
-      render(<Input framework='materialui'/>, container)
+      render(<Input framework='materialui' />, container)
     })
     const input = container.querySelector('input')
     expect(input.className).toBe('MuiInputBase-input MuiInput-input')
@@ -75,7 +76,7 @@ describe('Input', () => {
 
   it('render the default input from Antd', () => {
     act(() => {
-      render(<Input framework='antd'/>, container)
+      render(<Input framework='antd' />, container)
     })
     const input = container.querySelector('input')
     expect(input.className).toBe('ant-input')

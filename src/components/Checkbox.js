@@ -5,10 +5,6 @@ import styles from './css/checkbox.module.css'
 import Utils from '../resources/Utils'
 
 export default class Checkbox extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   onClick = () => {
     if (this.props.onClick) {
       return this.props.onClick
