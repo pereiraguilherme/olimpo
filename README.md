@@ -4,7 +4,7 @@
 
 [![NPM](https://img.shields.io/npm/v/olimpo.svg)](https://www.npmjs.com/package/olimpo) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-![alt text](https://i.pinimg.com/originals/73/12/96/731296513b04838919d29b1955bf74c2.webp)
+![alt text](https://github.com/pereiraguilherme/olimpo/blob/addContributingGuide/olimpo.jpg)
 ## Install
 
 ```bash
