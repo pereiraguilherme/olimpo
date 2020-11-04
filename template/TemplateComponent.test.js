@@ -1,3 +1,4 @@
+/* eslint-disable */ 
 import React from 'react'
 import { render } from 'react-dom'
 import { act } from 'react-dom/test-utils'
@@ -13,7 +14,7 @@ describe('Template', () => {
 
   it('render the default card with header', () => {
     act(() => {
-      render(<Template/> , container)
+      render(<MyTemplate />, container)
     })
     const cardHeader = container.querySelector('h1')
     expect(cardHeader.textContent).toBe('This is a template component')

@@ -9,7 +9,7 @@ import styles from './css/templateComponent.module.css'
 export default class MyTemplate extends Component {
   rendertemplateComponent = () => {
     return (
-      <div className={styles.templateComponent} {...this.props}> 
+      <div className={styles.templateComponent} {...this.props}>
         <h1>This is a template component</h1>
       </div>
     )
@@ -17,17 +17,14 @@ export default class MyTemplate extends Component {
 
   renderMaterialuiTemplateComponent = () => {
     /**
-    * Render MaterialUi component  
-    */  
-    return
+     * Render MaterialUi component
+     */
   }
 
-  
   renderAntdTemplateComponent = () => {
     /**
-    * Render Antd component  
-    */  
-    return
+     * Render Antd component
+     */
   }
 
   render() {
