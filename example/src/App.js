@@ -23,7 +23,8 @@ const App = () => {
     <div> 
       <Button text="Test" shape="round"/>
       <Checkbox label="Test" shape="round"/>
-      <Input/>
+      <Input label='Password' size='medium'/>
+      <Avatar type='text' value='Guilherme Silva' shape='circle' backgroundColor='#4287f5'/>
     </div> 
   );
 }
