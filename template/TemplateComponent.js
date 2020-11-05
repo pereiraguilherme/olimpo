@@ -7,7 +7,7 @@ import styles from './css/templateComponent.module.css'
 // import {  templateComponent as AntdtemplateComponent } from 'antd'
 
 export default class MyTemplate extends Component {
-  rendertemplateComponent = () => {
+  renderTemplateComponent = () => {
     return (
       <div className={styles.templateComponent} {...this.props}>
         <h1>This is a template component</h1>
@@ -37,7 +37,7 @@ export default class MyTemplate extends Component {
         template = this.renderAntdTemplateComponent()
         break
       default:
-        template = this.rendertemplateComponent()
+        template = this.renderTemplateComponent()
         break
     }
 

@@ -12,11 +12,11 @@ describe('Template', () => {
     document.body.appendChild(container)
   })
 
-  it('render the default card with header', () => {
+  it('render MyTemplate', () => {
     act(() => {
-      render(<MyTemplate />, container)
+      render(<MyTemplate> <h1>This is a template</h1></MyTemplate>, container)
     })
-    const cardHeader = container.querySelector('h1')
-    expect(cardHeader.textContent).toBe('This is a template component')
+    const template = container.querySelector('h1')
+    expect(template.textContent).toBe('This is a template')
   })
 })
