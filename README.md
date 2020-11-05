@@ -208,6 +208,8 @@ To start develpment in `olimpo` there is a few things that you need to do in ord
 cd olimpo/
 npm install
 ```
+To create a new component you can run `npm run create` that will initialize a component class for you instead of you have to write everything from scratch.
+
 Then you are able to start it. For development, you can start a rollup and also a example if you want to check visualy your change or new component. Jut import the module from local files, you need to import `olimpo` on your project then run the following commands:
 ```
 npm start ./olimpo
