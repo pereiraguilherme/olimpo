@@ -22,7 +22,7 @@
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build",
-    "create": "cp ./sample/TemplateComponent.js ./src/components/ && cp ./sample/TemplateComponent.test.js ./src/tests/components/ && cp ./sample/css/templateComponent.module.css ./src/components/css/ "
+    "create": "cp ./template/TemplateComponent.js ./src/components/ && cp ./template/TemplateComponent.test.js ./src/tests/components/ && cp ./template/css/templateComponent.module.css ./src/components/css/ "
   },
   "peerDependencies": {
     "react": "^16.0.0"
