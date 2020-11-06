@@ -199,6 +199,37 @@ class Example extends Component {
 ```
 **Obs.:** When use `materialui` or `antd` framework component, all properties available on [Material-UI](https://material-ui.com/components/avatars/) and [Ant Design](https://ant.design/components/avatar/) documentation can be use.
 
+### Card
+| Property | Description | Values |
+|----------|--------|--------|
+| header | Card header that will be displayed | **HTML or React elements** |
+|backgroundColor    | Card background color when `type` is `'text'` | Standart HTML color name: `'red', 'green', 'blue', 'yellow'...`<br> RGB code. Ex.: `rgb(255,0,0)` <br> Hexadecimal color code. Ex.: `#FF0000`|
+|size      | Card size | Default sizes: `small, medium, large`<br> **Number** value for size in pixels. Ex.: `100` |
+|shape     | Card borders shape | `round, square, circle`|
+|framework | Framework that component will be used | `'antd' or 'materialui'` |
+
+
+
+```jsx
+import React, { Component } from 'react'
+import { Avatar } from 'olimpo'
+
+class Example extends Component {
+  render() {
+    return 
+      <Card 
+        header={<h1>Card component</h1>}
+        backgroundColor='#0891a1'
+        shape='circle' 
+        size='large'
+      >
+      <h2>Card component body</h2>
+      </Card>
+  }
+}
+```
+**Obs.:** When use `materialui` or `antd` framework component, all properties available on [Material-UI](https://material-ui.com/components/cards/) and [Ant Design](https://ant.design/components/card/) documentation can be use.
+
 ## Contributing Guide
 Olimpo welcome all contributions. Please read contributing guide first. You can submit any ideas as pull requests or as GitHub issues. If you'd like to improve code, follow the develop patterns that already exist in other components and have a good time! :smile:
 For every new component, it must exist on others frameworks! Olimpo is the house of all gods, can you imagine if only Zeus live there? :stuck_out_tongue_winking_eye: 
